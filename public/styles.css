@@ -34,6 +34,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .slider{
@@ -115,6 +116,69 @@ ul{
     font-size: 1rem;
     margin-top: .5rem;
     color: var(--Cool-gray);
+}
+
+@media (max-width: 650px){
+    .left-side{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20rem;
+        width: 100%;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="172" viewBox="0 0 375 172"><defs><path id="a" d="M0 0h375v172H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="%23fff"><use xlink:href="%23a"/></mask><use xlink:href="%23a" fill="%23483EFF"/><g mask="url(%23b)"><g transform="translate(-151.029 -133.957)"><path fill="%236259FF" d="M79.546 349.634c54.547 128.646 292.524 204.132 354.626 99.852 62.102-104.28-95.035-123.204-150.583-230.963-55.547-107.759-98.711-175.015-178.973-150.466C24.354 92.607 25 220.987 79.546 349.634Z"/><ellipse cx="129.864" cy="258.711" fill="%23FFAF7E" rx="96.329" ry="96.373"/><path fill="%23F9818E" d="M464.88 433.146c87.31-40.69 133.585-206.525 60.253-246.82-73.333-40.293-82.587 68.465-155.485 109.343-72.898 40.877-118.192 72.245-99.348 126.973 18.845 54.728 107.27 51.194 194.58 10.504Z"/><g stroke="%23FFF" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5"><path d="m367.336 243.125 15.263-15.549M430.872 251.016l-17.995-15.112M399.36 271.751l-9.94 21.293"/></g></g></g></g></svg>');
+        background-size: cover;
+        border-radius: 0;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        font-weight: var(--fw-m);
+    }
+    .flex-column{
+        display: none;
+    }
+    .left-side>ul{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    .left-side>ul>li{
+        margin-inline: 1rem;
+    }
+    .slider{
+        height: 30rem;
+        width: 90%;
+        border-radius: 8px;
+        background-color: transparent;
+        display: block;
+        padding: 1rem;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    .right-side{
+        border-radius: 8px;
+        min-height: 25rem;
+        height: auto;
+        max-height: 35rem;
+        width: 90%;
+        background-color: white;
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        z-index: 100;
+        padding-inline: 2rem;
+        padding-bottom: 2rem;
+    }
+    .navigation{
+        background-color: white;
+        position: fixed;
+        height: 5rem;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding-inline: 2rem;
+    }
 }
 
 label{
@@ -275,6 +339,53 @@ input::placeholder{
     border-radius: 50%;
     background-color: var(--White);
     right: .12rem;
+}
+
+
+@media (max-width: 650px){
+    .plan-list{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    .plan-btn{
+        min-height: 3rem;
+        max-height: 6rem;
+        height: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .choice-div{
+        min-height: 3rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .plan-name{
+        position: absolute;
+        left: 4.5rem;
+    }
+    
+    .plan-price{
+        position: absolute;
+        left: 4.5rem;
+        top: 2.2rem;
+    }
+    
+    .plan-price-yearly{
+        position: absolute;
+        left: 4.5rem;
+        top: 2.2rem;
+    }
+    
+    .free-span{
+        position: absolute;
+        left: 4.5rem;
+        top: 3.3rem;
+    }
 }
 
 .para-addOns{
