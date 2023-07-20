@@ -161,7 +161,7 @@ ul{
         border-radius: 8px;
         min-height: 25rem;
         height: auto;
-        max-height: 35rem;
+        max-height: 38rem;
         width: 90%;
         background-color: white;
         position: absolute;
@@ -179,7 +179,7 @@ ul{
         height: 5rem;
         width: 115%;
         bottom: -10rem;
-        left: -2.5rem;
+        left: -5%;
         padding-inline: 3rem 2.5rem;
     }
 }
@@ -320,7 +320,6 @@ input::placeholder{
     background-color: var(--Marine-blue);
     margin-inline: 2rem;
     cursor: pointer;
-    
 }
 .toggle>span{
     position: absolute;
